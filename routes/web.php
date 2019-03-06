@@ -15,10 +15,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('test', function() use ($router) {
-    return $router->app->paladins->getPlayerStatus(16643473);
-});
-
 $router->get('{playerId}', function($playerId) use ($router) {
     $template = [
         'data' => [

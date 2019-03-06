@@ -54,7 +54,7 @@ $router->get('{playerId}', function($playerId) use ($router) {
     $template['data']['match'] = $match;
 
     if (isset($match)) {
-        $template['rich']['details'] = getGamemodeName($status['match_queue_id']);
+        $template['rich']['details'] = 'Playing ' . getGamemodeName($status['match_queue_id']);
         $template['rich']['state'] = 'Playing as ' . $player['ChampionName'];
         $template['rich']['large_image_key'] = getGamemodeImageKey($status['match_queue_id']);
         $template['rich']['large_image_text'] = $template['rich']['details'] . ' - Team ' . $player['taskForce'];
